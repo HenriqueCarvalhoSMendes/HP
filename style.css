@@ -1,0 +1,229 @@
+body, html{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/thumb-1920-1102284.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+ul, li, a {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+ul > li a:hover{
+    border-bottom: 1px solid black; 
+    color: black;
+}
+.logo > img{
+    position: relative;
+    top: 10px;
+    width: 140px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card {
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, .5);
+    border-radius: 15px;
+    background: rgba(196, 196, 196, 0.466);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.container .af {
+    background-image: url(assets/logo_AnimaisFantasticos.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container .hp {
+    background-image: url(assets/logo\ hp\ 3.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: ease-in-out .9s;
+    width: 100%;
+    height: 100%;
+}
+
+.container .card:hover .content {
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.521);
+    transform: translateY(0);
+    opacity: 1;
+    color: white;
+}
+
+
+@media (max-width: 720px){
+    .menu{
+        background-color: transparent;
+        width: 60px;
+        height: 100vh;
+        z-index: 1;
+        position: absolute;
+        cursor: pointer;
+        transition: 1s ease-in-out;
+}
+
+    .container {
+        margin-top: 10vh;
+    }
+    ul{
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: auto;
+        left: -500px;
+        display: flex;
+        color: grey;
+        transition: 1s .2s ease-in-out;
+    }
+    
+    a:hover{
+        background-color: #fff;
+    }
+   
+    .container .card {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        flex-direction: column;
+    }
+
+    .logo > img {
+       width: 30vw;
+       transform: translateX(50vw);
+       position: absolute;
+       z-index: -999;
+       left: -95px;
+       top: 0px;
+       transition: 1s ease-in-out;
+    }
+
+    .hambur {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        width: 30px;
+        height: 2px;
+        z-index: 999;
+        top: 28px;
+        left: 16px;
+        transition: .5s ease-in-out;
+    }
+    
+    .hambur:before,
+    .hambur:after {
+        background-color: #fff;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: .5s ease-in-out;
+    }
+    
+    .hambur:before {
+        top: -10px;
+    }
+    
+    .hambur:after{
+        bottom: -10px;
+    }
+
+    input:checked ~ label .hambur {
+        transform: rotate(45deg);
+    }
+    
+    input:checked ~ label .hambur:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+    
+    input:checked ~ label .hambur:after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+    
+    
+    input:checked ~label .menu {
+        background-color: black;
+        width: 50vw;
+        height: 100vh;
+        transition: 1s .4s ease-in-out;
+        transform: translateY(100);
+        opacity: 1;
+        z-index: 9;
+    }
+    
+    input:checked ~ label ul {
+       left: -22px;
+       transition: 1s .4s ease-in-out;
+    }
+    
+    input:checked ~ label img {
+        left: 0;
+        transition: 1s ease-in-out;
+    }
+    
+}
+
+
