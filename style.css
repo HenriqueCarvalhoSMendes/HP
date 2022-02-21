@@ -153,7 +153,7 @@ ul > li a:hover{
        transform: translateX(50vw);
        position: absolute;
        z-index: -999;
-       left: -95px;
+       left: -80px;
        top: 0px;
        transition: 1s ease-in-out;
     }
