@@ -30,7 +30,7 @@ function createCard(char){
 }
 
 function main(){
-    let data = fazGet("http://hp-api.herokuapp.com/api/characters/students")
+    let data = fazGet("students.json")
     let char = JSON.parse(data)
     let conteudo =  document.getElementById('container')
     char.forEach(element => {
