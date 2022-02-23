@@ -263,24 +263,24 @@ ul > li a:hover{
         transition: 1s ease-in-out;
     }
 
-    .container .houses {
-        width:30vw;
-        height: fit-content;
-        padding: 10px;
-        text-align: center;
-    }
-    
+   
 }
 
 .container .houses {
     text-align: center;
-    width: 30vw;
+    width: 250px;
     height: fit-content;
+    
+}
+
+.container .houses:hover img {
+    display: block;
+    transition: 1s ease-in-out;
 }
 
 
 .container .Gryffindor {
-    background-image: url(assets/gfi.jpg);
+    background: rgba(243, 143, 143, 0.466);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -292,7 +292,7 @@ ul > li a:hover{
 }
 
 .container .Slytherin {
-    background-image: url(assets/sli.jpg);
+    background: rgba(102, 247, 126, 0.466);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -304,7 +304,7 @@ ul > li a:hover{
 }
 
 .container .Hufflepuff {
-    background-image: url(assets/huf.jpg);
+    background: rgba(255, 246, 120, 0.466);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -316,7 +316,7 @@ ul > li a:hover{
 }
 
 .container .Ravenclaw {
-    background-image: url(assets/raven.jpg);
+    background: rgba(143, 161, 243, 0.466);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -328,55 +328,52 @@ ul > li a:hover{
 }
 
 .container .Gryffindor img {
-    padding: 10px;
-    margin: 10px;
-    width: 20vw;
+    padding-top: 1rem;
+    width: 8vw;
+    
 }
 
 .container .Slytherin img {
-    padding: 10px;
-    margin: 10px;
-    width: 20vw;
+    padding-top: 1rem;
+    width: 8vw;
 }
 
 .container .Ravenclaw img {
-    padding: 10px;
-    margin: 10px;
-    width: 20vw;
+    padding-top: 1rem;
+    width: 8vw;
 }
 
 .container .Hufflepuff img {
-    padding: 10px;
-    margin: 10px;
-    width: 20vw;
+    padding-top: 1rem;
+    width: 8vw;
 }
 
 .container > .Slytherin h1 {
-    background-color: green;
+    font-size: 2rem;
 }
 
 .container > .Slytherin h2 {
-    background-color: green;
+    font-size: 1rem;
 }
 
 .container .Gryffindor h1 {
-    background-color: red;
+   font-size: 2rem;
 }
 
 .container .Gryffindor h2 {
-    background-color: red;
+    font-size: 1rem;
 }
 
 .container .Hufflepuff h1 {
-    background-color: yellow
+    font-size: 2rem;
 }
 .container .Hufflepuff h2 {
-    background-color: yellow
+    font-size: 1rem;
 }
 
 .container .Ravenclaw h1 {
-    background-color: rgb(4, 4, 218)
+    font-size: 2rem;
 }
 .container .Ravenclaw h2 {
-    background-color: rgb(4, 4, 218)
+    font-size: 1rem;
 }

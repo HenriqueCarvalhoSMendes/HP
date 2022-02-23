@@ -6,7 +6,7 @@ window.addEventListener("load", function loading(){
 function openPage(x, y){
     var indice = x
     var target = y
-    var url = 'page'+indice+'.html'
+    var url = 'content'+indice+'.html'
 
     var xml = new XMLHttpRequest()
 

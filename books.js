@@ -16,13 +16,12 @@ function createCard(char){
     const h2 = document.createElement("h2")
     const img = document.createElement("img")
     img.src = `${char.imagen}`
-    h1.innerHTML = char.personaje
-    h2.innerHTML = char.casaDeHogwarts
+    h1.innerHTML = char.libro
+    h2.innerHTML = char.titulo_original
+    h2.innerHTML = char.fecha_de_lanzamiento
     
     div.classList.add(`card`)
     div.classList.add(`${char.casaDeHogwarts}`)
-    div.classList.add(`houses`)
-    div.appendChild(img)
     div.appendChild(h1)
     div.appendChild(h2)
 
@@ -30,7 +29,7 @@ function createCard(char){
 }
 
 function main(){
-    let data = fazGet("pers.json")
+    let data = fazGet("books.json")
     let char = JSON.parse(data)
     let conteudo =  document.getElementById('container')
     char.forEach(element => {
